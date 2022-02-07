@@ -10,16 +10,30 @@ $light-grayish-blue: hsl(210, 46%, 95%);
     box-sizing: border-box
 }
 
+html{
+    min-height: 100%;
+    display: flex;
+}
+
 body{
+    flex: 1;
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
+    position: relative;
 }
 
 .attribution { 
-    font-size: 11px; 
-    text-align: center; 
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0; 
 }
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+.attribution p{
+    font-size: 5px;
 }
