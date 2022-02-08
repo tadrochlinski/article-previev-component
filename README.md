@@ -13,14 +13,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](images/screenshot.png)
 
 ### Links
 
 - [Solution URL](https://github.com/tadrochlinski/article-previev-component)
-- [Live Site URL]()
-
-## My process
+- [Live Site URL](https://tadrochlinski.github.io/article-previev-component/)
 
 ### Built with
 
