@@ -25,6 +25,7 @@ body{
     display: grid;
     place-items: center;
     margin-bottom: 30px;
+    overflow-x: hidden;
 }
 
 .articlePreviev{
@@ -32,6 +33,7 @@ body{
     width: 350px;
     height: 550px;
     border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     overflow: hidden;
     display:flex;
     flex-direction: column;
@@ -88,6 +90,7 @@ body{
         height: 50px;
         border-radius: 50%;
         overflow: hidden;
+        position: relative;
     }
 
     &__authorImg{
@@ -116,7 +119,9 @@ body{
     &__shareBtn{
         width: 35px;
         height: 35px;
+        color: $dark-grayish-blue;
         background: $light-grayish-blue;
+        z-index: 2;
         border: 0;
         border-radius: 50%;
         display: grid;
@@ -127,6 +132,65 @@ body{
             cursor: pointer;
             transform: scale(1.2);
         }
+
+        &:active{
+            transform: scale(1);
+        }
+
+        &--active{
+            background: $desaturated-dark-blue;
+            color: $light-grayish-blue;
+        }
+    }
+
+
+
+    &__shareSection{
+        opacity: 0; 
+        background: $dark-grayish-blue;
+        position: absolute;
+        width: 350px;
+        height: 80px;
+        transform: translate(-30px, 1px);
+        border-radius: 0px 0px 10px 10px; 
+        padding: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__shareText{
+        color: $desaturated-dark-blue;
+        font-weight: 700;
+        letter-spacing: 4px;
+    }
+
+    &__sharePanel{
+        transform: translateX(20px);
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__mediaBtn{
+        width: 30px;
+        height: 30px;
+        background: 0;
+        border: 0;  
+        display: grid;
+        place-items: center;
+        transition: 0.2s ease-in-out;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.4);
+        }
+    }
+
+    &__mediaIcon{
+        font-size: 1.8rem;
+        color: $light-grayish-blue;
+
     }
     // #endregion
 }
@@ -185,6 +249,45 @@ body{
 
         &__authorData{
             transform: translateX(-60px);
+        }
+
+        &__shareSection{
+            width: 200px;
+            height: 50px;
+            padding: 5px;
+            border-radius: 10px;
+            transform: translate(247px, -70px);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        &__shareSection::after{
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $dark-grayish-blue;
+            position: relative;
+            right: calc(50% - 10px);
+            top: 31px;
+        }
+
+        &__shareText{
+            transform: translateX(10px);
+        }
+
+        &__sharePanel{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        &__mediaBtn{
+            
+        }
+    
+        &__mediaIcon{
+            font-size: 1.6rem;
         }
     }    
 }
