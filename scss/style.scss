@@ -156,7 +156,7 @@ body{
         padding: 30px;
         display: flex;
         align-items: center;
-        transition: opacity 200ms ease-in-out;
+        transition: opacity 300ms ease-in-out;
 
         &--active{
             opacity: 100 !important;
@@ -285,10 +285,6 @@ body{
             display:flex;
             align-items: center;
             justify-content: space-between;
-        }
-    
-        &__mediaBtn{
-            
         }
     
         &__mediaIcon{
